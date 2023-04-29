@@ -1,8 +1,8 @@
 /*
 
-    016 - Greatest Common Divisor of N Integers
+    017 - Least Common Multiple of N Integers
 
-    https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_p
+    https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_q
 
 */
 
@@ -26,6 +26,14 @@ fn gcd( a: usize, b: usize ) -> usize
     else { return b; }
 }
 
+//------------------------------------------------------------------------------
+//  最小公倍数の算出
+//------------------------------------------------------------------------------
+fn lcm( a: usize, b: usize ) -> usize
+{
+    a * b / gcd(a, b)
+}
+
 fn main()
 {
     let n: usize = input();
@@ -37,7 +45,7 @@ fn main()
     let mut result = nums[0];
     for i in 1..n
     {
-        result = gcd(result, nums[i]);
+        result = lcm(result, nums[i]);
     }
     println!("{}", result);
 }
