@@ -12,12 +12,14 @@ use algorithm_util::*;
 fn is_prime( n: usize ) -> bool
 {
     assert!(n > 1);
-    for i in 2..n
+    let mut i = 3;
+    while i * i < n
     {
         if n % i == 0
         {
             return false;
         }
+        i += 1;
     }
     return true;
 }
