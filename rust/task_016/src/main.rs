@@ -1,8 +1,8 @@
 /*
 
-    015 - Calculate GCD
+    016 - Greatest Common Divisor of N Integers
 
-    https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_o
+    https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_p
 
 */
 
@@ -28,10 +28,17 @@ fn gcd( a: usize, b: usize ) -> usize
 
 fn main()
 {
-    let inputs: Vec<usize> = input_vec();
-    let (a, b) = (inputs[0], inputs[1]);
-    assert!(a >= 1);
-    assert!(b <= 10_usize.pow(9));
+    let n: usize = input();
+    assert!(n >= 2 && n <= 10_usize.pow(5));
 
-    println!("{}", gcd(a, b));
+    let nums: Vec<usize> = input_vec();
+    assert!(nums.len() == n);
+
+    let mut result = nums[0];
+    for i in 1..n
+    {
+        result = gcd(result, nums[i]);
+    }
+
+    println!("{}", result);
 }
