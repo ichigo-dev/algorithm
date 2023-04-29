@@ -46,7 +46,7 @@ fn main()
     dp_table[0][0] = true;
     for i in 0..n
     {
-        for j in 0..(s+1)
+        for j in 0..=s
         {
             if nums[i] > j
             {

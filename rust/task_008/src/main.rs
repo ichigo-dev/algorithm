@@ -18,9 +18,9 @@ fn main()
     assert!(s >= 1 && s <= 2000);
 
     let mut cnt = 0;
-    for i in 1..(n+1)
+    for i in 1..=n
     {
-        for j in 1..(n+1)
+        for j in 1..=n
         {
             if i + j <= s
             {

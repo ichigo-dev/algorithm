@@ -18,7 +18,7 @@ fn main()
     assert!(x >= 1 && x < y && y <= 10_usize.pow(6));
 
     let mut cnt = 0;
-    for i in 1..(n+1)
+    for i in 1..=n
     {
         if i % x == 0 || i % y == 0
         {
