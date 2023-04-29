@@ -12,7 +12,7 @@ fn is_prime( n: usize ) -> bool
 {
     assert!(n > 1);
     let mut i = 3;
-    while i * i < n
+    while i * i <= n
     {
         if n % i == 0
         {

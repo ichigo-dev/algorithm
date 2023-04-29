@@ -15,7 +15,7 @@ fn main()
 
     let mut divisors = Vec::new();
     let mut i = 1;
-    while i * i < n
+    while i * i <= n
     {
         if n % i != 0
         {
