@@ -25,7 +25,7 @@ fn main()
             200 => { items.1 += 1; },
             300 => { items.2 += 1; },
             400 => { items.3 += 1; },
-            _ => {},
+            _ => panic!("Invalid input"),
         }
     }
     println!("{}", items.0 * items.3 + items.1 * items.2);
